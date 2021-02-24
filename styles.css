@@ -1,0 +1,256 @@
+
+/* html reset code
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+
+/*below here begins the styling for the actual page. Aka the reset code ends here.*/
+body {
+    color: white;
+}
+
+body a {
+    color: white;
+}
+
+/*This is the code for the header/nav menu*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    padding: 15px;
+    font-size: small;
+    z-index: 1;
+}
+
+    #logo {
+        height: 40px;
+        position: relative;
+        border-radius: 10px;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: left;
+    }
+
+        .nav-item {
+            padding: 10px;
+        }  
+
+        .nav-item a:hover {
+            text-decoration: underline;
+        }
+
+    #shop-and-menu {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+        #shop-and-menu svg {
+            height: 10px;
+        }
+
+        #shop-and-menu svg rect {
+            stroke: #ffffff;
+            fill: #ffffff;
+            height: 10px;
+        }
+
+
+/* This is the code for the main sections for each game update*/
+.flex-container {
+    height: 370vh;
+    display: flex;
+    flex-direction: column;
+}
+    .flex-box {
+        position: relative;
+        width: 100%;
+        flex-grow: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+    }
+
+        .article-description {
+            margin: 10px;
+        }
+
+        .article-button {
+            height: 40px;
+            width: 150px;
+            background-color: transparent;
+            border: solid white 1px;
+        }
+
+        .article-button a {
+            display: block;
+            height: 40px;
+            width: 150px;
+            line-height: 40px;
+        }
+
+        .article-button a:hover {
+            background-color: white;
+            color: black;
+        }
+
+    /*the below is css to add the background image to each section*/
+    #lol {
+        background: url("images/viego.jpg")  no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    #wow {
+        background: url("images/tbc.jpg")  no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    #cyber {
+        /* this color code is to change the color in only the cyberpunk article*/
+        color: black;
+        background: url("images/cp.jpg")  no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    /* this color code is to change the color in only the cyberpunk article*/
+    #cyber a {
+        color: black;
+    }
+
+    /* this color code is to change the color in only the cyberpunk article*/
+    #cyber button {
+        border: black solid 1px;
+    }
+
+    /* this color code is to change the color in only the cyberpunk article*/
+    #cyber button a:hover{
+        border: black solid 1px;
+        background-color: black;
+        color: white;
+    }
+
+    #hollow {
+        background: url("images/hollow-knight.jpg")  no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    /*all the below code represents the scroll arrow formatting and its animation*/
+        .svg-center {
+            display: flex;
+            justify-content: center;
+            align-items:flex-end;
+            height: 100px;
+            padding: 25px;
+        }
+    
+            .arrows {
+                height: 20px;
+                width: 30px;
+            }
+
+                .arrows path {
+                    stroke: #ffffff;
+                    fill: transparent;
+                    stroke-width: 2px;	
+                    animation: arrow 2s infinite;
+                    -webkit-animation: arrow 2s infinite; 
+                }
+
+                @keyframes arrow
+                {
+                0% {opacity:0}
+                40% {opacity:1}
+                80% {opacity:0}
+                100% {opacity:0}
+                }
+
+                @-webkit-keyframes arrow /*Safari and Chrome*/
+                {
+                0% {opacity:0}
+                40% {opacity:1}
+                80% {opacity:0}
+                100% {opacity:0}
+                }
+
+                .arrows path.a1 {
+                    animation-delay:-1s;
+                    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+                }
+
+
+/* this is the code for the footer*/
+footer {
+    height: 5vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .footer-box {
+        margin: 0 15px;
+        font-size: small;
+    }
+
+    footer p {
+        color: grey;    
+    }
